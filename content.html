@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" 
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/6cc0baed30.js" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="content-container">
+            <div class="left-content">
+                <p>
+                    February 8, 2024<br><br>
+                    Hi love, it's been five months since I met you, and<br>in that time, 
+                    I've come to realize just how much<br>you're willing to fight for us. 
+                    I want to take a<br>moment to express my deep appreciation for<br>your constant 
+                    presence in my life. Your<br>unwavering support, efforts, and assistance in 
+                    various aspects have not gone unnoticed. I am<br>genuinely grateful for the 
+                    beautiful experiences we've shared together. Among those cherished<br>memories 
+                    is our unforgettable staycation. The<br>joy of living under the same roof with 
+                    you was<br>truly heartwarming and wholesome. We laughed, we bonded, and we created 
+                    memories that I will<br>forever hold dear. Thank you for being such an<br>integral 
+                    part of my life. As I reflect on our<br>journey together, I am reminded of the 
+                    <br>importance of reciprocating the love and effort you've shown me. It's time 
+                    for me to step up and go the extra mile for you, because you truly<br>deserve 
+                    nothing but the best.<br><br><br>So, Fiona Andrea, my love, my question is...
+                </p>
+
+                <div class="under-content">
+                    <button class="button" onclick="navigateToPage('index.html')">Back</button>
+                    <button class="button" onclick="navigateToPage('ques.html')">Proceed</button>
+                </div>
+            
+            </div>
+
+            <div class="right-content">
+                <div class="audios">
+                    <div class="hero">
+                        <div class="music">
+                            <p>Artist: TJ Monterde</p>
+                            <h2>Palagi</h2>
+                            <div class="track">
+                                <i class="fa-solid fa-f" id="playbtn1"></i>
+                                <div id="waveform1"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero">
+                        <div class="music">
+                            <p>Artist: Sunkissed Lola</p>
+                            <h2>Pasilyo</h2>
+                            <div class="track">
+                                <i class="fa-solid fa-i" id="playbtn2"></i>
+                                <div id="waveform2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero">
+                        <div class="music">
+                            <p>Artist: Cup of Joe</p>
+                            <h2>Tingin</h2>
+                            <div class="track">
+                                <i class="fa-solid fa-o" id="playbtn3"></i>
+                                <div id="waveform3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero">
+                        <div class="music">
+                            <p>Artist: Wave to Earth</p>
+                            <h2>Wave</h2>
+                            <div class="track">
+                                <i class="fa-solid fa-n" id="playbtn4"></i>
+                                <div id="waveform4"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero">
+                        <div class="music">
+                            <p>Artist: Kurosuke</p>
+                            <h2>Cherie</h2>
+                            <div class="track">
+                                <i class="fa-solid fa-a" id="playbtn5"></i>
+                                <div id="waveform5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="module">
+            import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+            
+            var playBtn1 = document.getElementById("playbtn1");
+            var playBtn2 = document.getElementById("playbtn2");
+            var playBtn3 = document.getElementById("playbtn3");
+            var playBtn4 = document.getElementById("playbtn4");
+            var playBtn5 = document.getElementById("playbtn5");
+    
+            const wavesurfer1 = WaveSurfer.create({
+              container: '#waveform1',
+              waveColor: '#fff',
+              progressColor: '#07042e',
+              url: 'assets/Palagi.mp3',
+              barWidth: 4,
+              responsive: true,
+              height: 50,
+              barRadius: 4,
+            })
+    
+            const wavesurfer2 = WaveSurfer.create({
+              container: '#waveform2',
+              waveColor: '#fff',
+              progressColor: '#07042e',
+              url: 'assets/Pasilyo.mp3',
+              barWidth: 4,
+              responsive: true,
+              height: 50,
+              barRadius: 4,
+            })
+    
+            const wavesurfer3 = WaveSurfer.create({
+              container: '#waveform3',
+              waveColor: '#fff',
+              progressColor: '#07042e',
+              url: 'assets/Tingin.mp3',
+              barWidth: 4,
+              responsive: true,
+              height: 50,
+              barRadius: 4,
+            })
+
+            const wavesurfer4 = WaveSurfer.create({
+              container: '#waveform4',
+              waveColor: '#fff',
+              progressColor: '#07042e',
+              url: 'assets/Wave.mp3',
+              barWidth: 4,
+              responsive: true,
+              height: 50,
+              barRadius: 4,
+            })
+
+            const wavesurfer5 = WaveSurfer.create({
+              container: '#waveform5',
+              waveColor: '#fff',
+              progressColor: '#07042e',
+              url: 'assets/Cherie.mp3',
+              barWidth: 4,
+              responsive: true,
+              height: 50,
+              barRadius: 4,
+            })
+            
+            wavesurfer1.on('interaction', () => {
+              wavesurfer.play()
+            })
+            wavesurfer2.on('interaction', () => {
+              wavesurfer.play()
+            })
+            wavesurfer3.on('interaction', () => {
+              wavesurfer.play()
+            })
+            wavesurfer4.on('interaction', () => {
+              wavesurfer.play()
+            })
+            wavesurfer5.on('interaction', () => {
+              wavesurfer.play()
+            })
+    
+            playBtn1.onclick = function(){
+                wavesurfer1.playPause();
+            }
+            playBtn2.onclick = function(){
+                wavesurfer2.playPause();
+            }
+            playBtn3.onclick = function(){
+                wavesurfer3.playPause();
+            }
+            playBtn4.onclick = function(){
+                wavesurfer4.playPause();
+            }
+            playBtn5.onclick = function(){
+                wavesurfer5.playPause();
+            }
+        </script>
+    </body>
+</html>
